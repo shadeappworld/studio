@@ -1,0 +1,24 @@
+{
+  "background_color": "#000000",
+  "description": "The entertainment that you always wanted - in your own way. That's Shade App Plus!",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Shade App Plus",
+  "orientation": "natural",
+  "scope": "/",
+  "short_name": "Shade",
+  "start_url": "/",
+  "theme_color": "#c4ffe8",
+  "categories": [
+    "entertainment"
+  ],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "assets/favicon.ico",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [],
+  "lang": "en"
+}
