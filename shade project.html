@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .circle-popup {
+            position: fixed;
+            bottom: 75px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 60%;
+            background-color: #152629;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 -1px 12px hsla(var(--hue), var(--sat), 15%, 0.15);
+        }
+
+        .chat-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #fff;
+            border-radius: 50%;
+
+        }
+
+        .popup-content {
+            position: fixed;
+            top: 10px;
+            left: 10%;
+            right: 10%;
+            width: 80%;
+            height: 55%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            z-index: 99999;
+            border-radius: 10%
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            left: 50px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #e74c3c;
+            cursor: pointer;
+            transform: scale(0.8);
+            animation: pulse 0.3s infinite;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">Shade App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Games">Shade Notes</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">All Products</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="submit">
+                        <i class="bi-cart-fill me-1"></i>
+                        Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Game of the week: </h1>
+                <p class="lead fw-normal text-white-50 mb-0">Uninterrupted play time with no ads + offline support for
+                    select games!</p>
+                    <div class="text-center"><a class="lead fw-normal text-white-50 mb-0"
+                        href="https://poki.com/en/g/subway-surfers#fullscreen">Play Now!</a></div>
+            </div>
+        </div>
+    </header>
+    <!-- Section-->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/R.351ccf609146fd90fdd4de30ce64068b?rik=%2bW7%2f3jiatc0yNQ&pid=ImgRaw&r=0" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Subway Surfers</h5>
+                                <!-- Product price-->
+                                Kiloo - Poki
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="https://poki.com/en/g/subway-surfers#fullscreen">Play Now!</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="data:image/jpeg;base64,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" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Tower Game</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">Online</span>
+                                Offline Capable
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="https://www.towergame.app/">Play Now</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.Uj-D-IXNlFFRoFO-yW7IXgHaNK?w=115&h=183&c=7&r=0&o=5&pid=1.7" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">The Cube</h5>
+                                <!-- Product price-->
+
+                                Offline Capable
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="https://bsehovac.github.io/the-cube/">Play Now</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="data:image/jpeg;base64,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" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Stickman Hook</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                Madbox - Poki
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="https://poki.com/en/g/stickman-hook">Play Now</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.1WFs6o0fF2Awy4LXct1ZlgHaD4?w=273&h=180&c=7&r=0&o=5&pid=1.7" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Little Alchemy</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">Online</span>
+                                Offline Capable
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://littlealchemy2.com/">Play Now</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/0235b530eec4f17ad60137f6b245a988.jpeg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Moto X3M</h5>
+                                <!-- Product price-->
+                                Madpuffers - Poki
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="https://poki.com/en/g/moto-x3m-5-pool-party">Play Now</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIP.BqjYx2m8F9u4_6lYyQj_2gHaHa?w=186&h=187&c=7&r=0&o=5&pid=1.7" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">2048</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">Online</span>
+                                Online Capable
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                    href="https://2048-opera-pwa.surge.sh/">Play Now</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="data:image/jpeg;base64,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" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Meet Universal Gaming</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                Explore games from across gaming services in just a single tap of a button!
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#explore">Explore
+                                    Now!</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header-->
+    <header class="bg-dark py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-white">
+                <h1 class="display-4 fw-bolder">Popular Books</h1>
+                <p class="lead fw-normal text-white-50 mb-0">And hey, even if don't find your favourite here, you could
+                    always just tap on Explore to find your favourite new book 📒!</p>
+            </div>
+        </div>
+    </header>
+    <!-- Section-->
+    <section class="py-5" id="Games">
+        <div class="container px-4 px-lg-5 mt-5">
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIG.Y9ZFJuijLXAxzmlqD8Rh?pid=ImgGn" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Feeling Lucky?</h5>
+                                <!-- Product price-->
+                                Let Shade App recommend a random book for you.
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://openlibrary.org/random">Suprise Me!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIG.lVDp2YExMHpjOCl5oqZQ?pid=ImgGn" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Editors Choice</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through"></span>
+                                Check out the latest and greatest stories hand-picked by the Wattpad team
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.wattpad.com/featured/551324301">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIG.Hg0STd0msHNTR427aJ45?pid=ImgGn" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Summer in the City 🥵</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through"></span>
+                                Check out the latest and greatest stories hand-picked by the Wattpad team
+
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.wattpad.com/featured/1439144473">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIG.VDyTUKVLaGW1Ds_.IF.x?pid=ImgGn" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Where LGBTQIA+ stories live 🏳️‍🌈
+                                </h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                Check out the latest and greatest stories hand-picked by the Wattpad team
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.wattpad.com/featured/1432466396">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIG.wjMmLJsaeoO7ORkrzjDT?pid=ImgGn" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Mystery Stories</h5>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through"></span>
+                                Read the best mystery stories for on Wattpad
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.wattpad.com/stories/mystery">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://th.bing.com/th/id/OIG.hQ.6h8ttapCviD7g.PcV?pid=ImgGn" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Humor Stories</h5>
+                                <!-- Product price-->
+                                These funny stories will have you laughing for days.
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.wattpad.com/stories/humor">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Sale badge-->
+                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">🪄
+                        </div>
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Special Item</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                <span class="text-muted text-decoration-line-through">$20.00</span>
+                                $18.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image-->
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                        <!-- Product details-->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name-->
+                                <h5 class="fw-bolder">Popular Item</h5>
+                                <!-- Product reviews-->
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <!-- Product price-->
+                                $40.00
+                            </div>
+                        </div>
+                        <!-- Product actions-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="watch">
+        <h2 class="section__title"></h2>
+        <script async src="https://walls.io/js/wallsio-widget-1.2.js"
+            data-wallurl="https://my.walls.io/u4v6u?nobackground=1&amp;show_header=0&amp;initial_posts=500"
+            data-width="100%" data-autoheight="1" data-height="800" data-lazyload="1"></script>
+        </script>
+    </section>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <div class="circle-popup">
+        <div class="chatcon">🪄</div>
+        <div class="popup-content">
+
+            <iframe id="popup-iframe" src="/smagic.html"></iframe>
+        </div>
+    </div>
+    <script>
+        // Get the necessary DOM elements
+        var circlePopup = document.querySelector('.circle-popup');
+        var popupContent = document.querySelector('.popup-content');
+        var closeBtn = document.querySelector('.close-btn');
+
+        // Function to toggle the popup
+        function togglePopup() {
+            popupContent.style.display = popupContent.style.display === 'none' ? 'block' : 'none';
+        }
+
+        // Add event listeners to the elements
+        circlePopup.addEventListener('click', togglePopup);
+        closeBtn.addEventListener('click', togglePopup);
+    </script>
+
+</body>
+
+</html>
