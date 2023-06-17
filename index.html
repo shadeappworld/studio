@@ -593,6 +593,12 @@
         circlePopup.addEventListener('click', togglePopup);
         closeBtn.addEventListener('click', togglePopup);
     </script>
+    <script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('sw.js')
+  }
+</script>
+
 
 </body>
 
