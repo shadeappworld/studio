@@ -7,13 +7,13 @@
   "orientation": "natural",
   "scope": "/",
   "short_name": "Shade",
-  "start_url": "/",
+  "start_url": "/index.html",
   "theme_color": "#c4ffe8",
   "categories": [
     "entertainment"
   ],
   "screenshots": [],
-  "icons": [
+  "icons": "https://yt3.googleusercontent.com/JYMBAQBDzHAABnmesnaj-pgag-8JHsF4vlP0_9syTUgBoCS_fuS5PGWpJb_bt6f_4erar6M2yAI=s176-c-k-c0x00ffffff-no-rj"
     {
       "src": "assets/favicon.ico",
       "type": "image/x-icon"
