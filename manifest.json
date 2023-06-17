@@ -4,22 +4,22 @@
   "dir": "ltr",
   "display": "standalone",
   "name": "Shade App Plus",
-  "orientation": "natural",
+  "orientation": "portrait",
   "scope": "/",
   "short_name": "Shade",
   "start_url": "/index.html",
-  "theme_color": "#c4ffe8",
+  "theme_color": "#a2ffe2",
   "categories": [
     "entertainment"
   ],
   "screenshots": [],
   "icons": [
-    "https://yt3.googleusercontent.com/JYMBAQBDzHAABnmesnaj-pgag-8JHsF4vlP0_9syTUgBoCS_fuS5PGWpJb_bt6f_4erar6M2yAI=s176-c-k-c0x00ffffff-no-rj"
     {
-      "src": "assets/favicon.ico",
+      "src": "channels4_profile.jpg",
       "type": "image/x-icon"
     }
   ],
   "shortcuts": [],
-  "lang": "en"
+  "lang": "en",
+  "prefer_related_applications": false
 }
