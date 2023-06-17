@@ -13,7 +13,8 @@
     "entertainment"
   ],
   "screenshots": [],
-  "icons": "https://yt3.googleusercontent.com/JYMBAQBDzHAABnmesnaj-pgag-8JHsF4vlP0_9syTUgBoCS_fuS5PGWpJb_bt6f_4erar6M2yAI=s176-c-k-c0x00ffffff-no-rj"
+  "icons": [
+    "https://yt3.googleusercontent.com/JYMBAQBDzHAABnmesnaj-pgag-8JHsF4vlP0_9syTUgBoCS_fuS5PGWpJb_bt6f_4erar6M2yAI=s176-c-k-c0x00ffffff-no-rj"
     {
       "src": "assets/favicon.ico",
       "type": "image/x-icon"
