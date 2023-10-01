@@ -1,116 +1,307 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-  <meta http-equiv="Refresh" content="0; URL=https://shadeappworld.github.io/music" />
-    
-    
-    <style>
-    .circle-popup {
-      position: fixed;
-      bottom: 75px;
-      left: 30px;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #CEF6F5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      z-index: 9999;
-    }
+<html lang="en-us">
 
-    .chat-icon {
-    position: fixed;
-      bottom: 70px;
-      left: 30px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: #CEF6F5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      z-index: 9999;
-      }
-
-    .popup-content {
-      position: fixed;
-            top: 10px;
-            left: 10%;
-            right: 10%;
-            width: 80%;
-            height: 50%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: none;
-            z-index: 99999;
-            border-radius: 20%
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      left: 50px
-      right: 10px;
-      width: 20px;
-      height: 20px;
-      background-color: #e74c3c;
-      cursor: pointer;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border-radius: 10%;
-    }
-    </style>
-    <meta charset="utf-8">  
-    <title>Shade Studio Pro</title>
-    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Anime Template">
+    <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Iconscout Link For Icons -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <!-- Theme included stylesheets --> <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet"> <link href="//cdn.quilljs.com/1.3.6/quill.bubble.css" rel="stylesheet"> <!-- Core build with no theme, formatting, non-essential modules --> <link href="//cdn.quilljs.com/1.3.6/quill.core.css" rel="stylesheet"> <script src="//cdn.quilljs.com/1.3.6/quill.core.js"></script>
-<link rel="manifest" href="manifest.json" />
-    
-  </head>
-  <body><div class="loader"></div><script>
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('sw.js')
-  }
-    </script>
-    <div class="circle-popup">
-    <div class="chat-icon">🪄</div>
-    <div class="popup-content">
-              
-      <iframe id="popup-iframe" src="smagic.html"></iframe>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shade Studio Ultra</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/plyr.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
     </div>
-  </div>
-<script>
-    // Get the necessary DOM elements
-    var circlePopup = document.querySelector('.circle-popup');
-    var popupContent = document.querySelector('.popup-content');
-    var closeBtn = document.querySelector('.close-btn');
 
-    // Function to toggle the popup
-    function togglePopup() {
-      popupContent.style.display = popupContent.style.display === 'none' ? 'block' : 'none';
-    }
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Homepage</a></li>
+                                <li><a href="./categories.html">Explore <span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="./categories.html">Games</a></li>
+                                        <li><a href="https://shadeappworld.github.io/notes">Shade Notes</a></li>
+                                        <li><a href="https://shadeappworld.github.io/music">Shade Music</a></li>
+                                      
+                                    </ul>
+                                </li>
+                                <li><a href="./blog.html">Our Blog</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                               </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header End -->
 
-    // Add event listeners to the elements
-    circlePopup.addEventListener('click', togglePopup);
-    closeBtn.addEventListener('click', togglePopup);
-  </script>
-  <script>
-      
-  </script>
-    <script>
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('sw.js')
-  }
-</script>
+    <!-- Hero Section Begin -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__slider owl-carousel">
+                <div class="hero__items set-bg"
+                    data-setbg="https://th.bing.com/th/id/R.e4d210a117d8496d917ed2d5990f5cfe?rik=9%2bgSvvrXwq7SkQ&pid=ImgRaw&r=0">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label">Games</div>
+                                <h2>Stickman Hook</h2>
+                                <p>How far can you go?</p>
+                                <a href="https://poki.com/en/g/stickman-hook"><span>Play Now</span> <i
+                                        class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg"
+                    data-setbg="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAEHALoDASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAABAUCAwYAAQf/xABEEAACAQIEBAQEAgYJAgYDAAABAgMEEQAFEiETMUFRBiJhcRQygZEjoRVCUrHB0SQzU2JygpLh8AcWNENEg6LxVLLC/8QAGwEAAgMBAQEAAAAAAAAAAAAAAwUBAgQGAAf/xAA2EQABBAECBAQEBQMEAwAAAAABAAIDEQQhMQUSQVETImFxgaHR8CORscHhBhQyFSRC8TNicv/aAAwDAQACEQMRAD8AyBvdT3H+2Dqaq06VkJ08g3b3wBq1KjWtudu2JKw7jC3HkdE5sjNwsk0Yk0K0IHLEwDgfLOJPAwA1GJ9HS+ki4/jg7QymzBgfUEfvx3WNlRztBaRfa9QuclidGaIUQDixVOPVXFqrjZaylQOlFLO2lFF2Y32HsN/bGgyrwpV1cHxWZVldRtM7PDR04p1eKD9TjGSNjrPMjpe3MYsyChpSi5lLollWaaOnU7rTNC7RlmH9obXF+QItzuSG8V0K5/JkjSxQGlgkmq565xAjOAumGn4hF+YJblsQL8xxmd/UHPkvxMRpJj1ceg9O59K3XR4PDg1glmo82wQmceGKKhpkzH9MTwU+W8SpqTWxpUGUFDGEUxmOxNyAADckdsZWnrIc2oakQ3SZo3XhORxElXzpsbE7gW2xofF9ac1jyDLsprqOpqp83jc08LxVIYRIXE02hioSP5iCLH/Lhn4kjiqqWmy9Y6ZsyzWdKGhneFOJCV/FnqVIGoBFDHY8yB1wPH49yeE2UG5b0OhAG5N7Ad1on4dHJqygW1ss2ssbRRTFgqzLGyXO5LgMFUcyfTHssiQTQU84lhmqIzLCk8ckRkQdVEgB7226YaZbl/8A25JTy11bHUrQZfWytNHFJG0MClVLst2uT8q8uRO/LAHjqietpqDxFQTLJ8IlOCYiG4kMsg4UsRHPdgD7jGs/1LAZ2Qs1DtndCauvetu6ws4OeQuedeyFZlSrcs2kfB06DmSWaeeygDck48qQ39BDLIqGqEpaWOSJdMMUj31SKBzK4IrKOoyl/DeYTVE02YrWUtVLl9NS8Q8Gn1tPpeMghIlkOokHew67NPFMNVmFX4Gno5C8aZ1AGeM3ThSBKkSm36umNj9sWf8A1BB4kccerXl2vTy7/nRrupj4S4tLnmiEjaRA8MVpeLOyrTRGNkkqNRsGhWTTdSdr8vXBdVlebUdOaurpDBTqyK7PNCzJrOkF1jYgC9gfN1+zHxjRw5xR1EVNvm2WpT5gBDCslWaN2lXRECykg2LW1c17ncjMauSt8GTTwPNUyT5FDMh4f4skgjRizIhbzAglhc8jjIz+p/EijmDaDnBtf/Wo+BCOODxixZtYsTUr1U8rVEKrEopYNUiLq3Ekri55E6VH+D1x1UOMY6RdxMvFqCOlKDbT/wC4fL7BsbZsxfP/AA1VVGWpE9TVUckaxSpfROFCzQgG3mtq0epGMhSxsY2nkQrLUEO6nnGqDQkP+QCx9b98N+G8TGeZGcvKWmiOv/R6eiw5eIMXleDd7ffzUWXFRXBbLisrh2UtBQpXECDgkrisrihRAUOVOPNJxcVx5pxVEtKKKlmkiWd4iaYM12IDKSptYgG/3w5iMBUIyIyWtpKqVt7WxXlE4SmiiH6urUD11sW5YvnWGIrJHsjsQV6K3Pb0x8kklc95YfguhmjNBwRVJT0cBkeBTGZLakDEoSCSCAeWGCskq8Nt78u6nuMJo5tWyn/bBka/FT5bRmWaMVeZUdM707lJOG5OuzD035dMTA2UzNp1G9D2QmP5vI/qr5UFPqMzJGoBOqRlRSBve7EYkhhdnWKWOQowRuG6tpYqGs1vcY2NJ4V8M0jCQUfHlHOSullqWP0lJT/44W5j4UqKmvqa+lzuop2nYE0708UtMqgBQgUFdh0x3beOxRgCdw9TtfwWR/CSQSw+yypjEFS9VBnNfl89YiPCKMJJBJGl0E1RE5FwxBC2PJb76hgqKqzavFRSeIctyuvo4YneDMgsJikI+WMIbSBm5bBSOZ23whkrY6bM6nLK1KaWKmqZafzE00XEDFC0MiboSeltJ6i+4Z5lXZKRRw01NW08lLGVqRS0kVRJJsoF5YpeEOu5PXl0xyvE25zshzms5g66cB/j21BDh8x8F13Dxw4RxRyOLXD/ACuiDX3Wg0R+W02R5JUVNZllOU+Mb4cmaRpnp9MYm4ULtvobctfe6jcg+X34vM5PFktdPEy0VHRNl2TmR40jledoy0qEm3mAYkn0HS2MPP4qrVnj+GooFpIUkjihrUadmZyC00kilTrNgNrCwta3NvlT+Ls5p3lTJqWqglmVoC6zQUkHCDKVEcTIpJuS2pyeWMR4fmkvmkIJc3lJJ1Avp0Gm+vzRjNgc4a0HlDr23H59/lotbU5hHVfpGGohjkWphWjMcrMY5FSBZNLGI6tAd2DEEcj2wNTVVbWUNPTVOWNQDL6ikkjp6CVZ6fRAytE0i2toVreUt0vfa4zOd5T4qy2iSfM80kQTSVLRU9FIFXWziRzIY9rXfbzfbCSjynxLmkTmnlzKWnCsZW0VTwhFFzdiwQ4PDwd5jDo5BWhBGtUA2xqBdCtlmOZjirjPW9d7N9r091u5s/yuCpizeaogNVJBDlcbJUrLEImn1OyRKSQoPmcnooHXfhJmeWUOXymK2W8XVSiaoiGg/EcSCmBBBtzVDc+U72tjN0P/AE+ziuUMuqmhk4bpUVoEXkIJOmEAyG+1jpGCc08DVEM+V5TR1klXVSU01UDKxjjVULKyqJXKhRz2F/TBv9NhY4QCUWNSDR8rduulWdT3KhmeAC7whrp167n3O/pWiazZ3RUue5JmDU1ZJmeYxw5ZaOrRaanhM5i88UYLM2+oAm2wPTZnUz10dV8Tl9VUUtPPLKlXFDSxVEclUEDrLGkosrWDa7WvYdTfGLf/AKf+MKENVBoFanQzaqWTXKukXuiodd/YYWVFR4vCxUOZ1eYxo80MkcdQzcUODYOmrzgi+KnhJfyHGeCAOU9QR0Fajy9AqjJi5nF7NzYANV39dVtkzfxTDmUBfMIc0y6V+BOgjpqSWkDG3EkiOm2nmSGItfffaNTXRVEqVgjMYqS5kI/qqgI4iaojP7SnZ+435pdxJMl8f0TRNNSQ5xFC6ui10cdTKNJvbjQNxvcEW9MLM0zOsjaplmyGKgq6kBJWbjFEWyhliidVVddvMbE7ncasWx4MuHLZkRBumhLSKIvZw+g0/QsjuHy48kT2us7X0PodPmOnrafsmK9F2UftMFH1NsGZBked5xlkWYz5qaeWoklMSSUkcsbxqba7BlsL3AA6D1xPMMqzfJhR1FXU5ZNDJXUdMvDWphmZ5JVFwpDJYC5PmHL1x3reIwPJaDqFxB4dM0XoUrZLXHYkYrK4OnRVnqVVlYJUTxnSwYApIykG3XAzkILnn0GDT5DIITM/YBY2tJdyhDuugXbte3XFHFTsPviM0pIdieZNycKjUPc2Xa5tv0xxT+MZk5th5R2A+qbR4za7ropFIURkqwAADNb7Ngp5JGhMLHYMHAa+oEX6nCeNzyP2OD4pbgKwDKLgX5rf9k4VllG19AyeFxTAmDynt0/hEQSvFqCgEHffvjS+EYJa/OEqJLcDKUNUxA2NTUK0MKb9hrb7d8ZcRyXup1R2uSPmH+JcaXwtmtJlr5pBVSCJK2WmqIJ3DGINHGYTFKyg6ehUkW57jqWQFsb5IRb6Ne+36Ll/7YxThkwo+q+lPMkcckjmyRo8r/4UUuf3YopqyGtpaOth/qqunhqohe5CSoHANu3I+2AuImYU1XBFNE6VdLU0wlppIpwnGiaMPaJidr4yNIP+pWQ5dDlVPk+X1SUzTrT1T1MbnhO5cKkbyR8rm1x9Nsc7DhyZ+I5rnBkod/y08tff5Le/8N4rUei9joqTLPFeYPnGWJPSZzmITK6qaKKaCOeoLSAWe4ub6TtcWvyxtamOP4Gup1REiekqozGiqiWaFh8qgDHyrMKzx7UVmTHP6apgo4M0oZgzU8cVJEyyqNZliGjYX3LY+pTzoYK0giwp6pgRbkIna4ONvHZJ4psM8+pIBonlNFvT4ocLQ4OobLJUXgjJo6KGulqMwapehFVIqSxLAHeHilRHwybA8rnGmySmgpcoymOJAmujpqmXcktPPEksjksSdyceZNUxVeT5FMSCtRllCX9SYVjcfcHEaes+HygTMmt6CgmWSMELrkoY2iZL9LlDhRxTOysyOXDkdqJg0dBR5gNvUdVeOJrSHgdEo8eUkk+R/FR315fULK1ukUtkLfRgn3w9yeu/SOVZTW9aikhdgNlEijhuABtzBx5DU5XnNAGjcTUGY08kLHa+iQaHVhvZl6joR9Sr8JBqXJUoZGBky/MM1oGPcw1LH+OBzyPdwU48gqSB4B9jdfr8lYM/FBGxC0hJJJPMm5wgmV5PGGXkfJTeHZpW95ah4R+/8sdm3ialymoankoa+p00UNXrooS6qXklRlnkYhFAAUg36nAWT1y57JSeJGX4NYkrsupqdG4jzQa11NUysADZgSgVRbfc3sK4GNk4EMudP/i+MgG9SX0Rpv72vOAkcI273+i1pa5vyxnajKsozXPqt66mFQaLLsqaEO8iqkkktUxJCMLmyrz/AI4KXOaVq6to2mpo4qSmpJZpZpY4/wAeoLsEBkYbKgBa37Y7Y8yc/ENmWaEWGaVQlpgQQRQwRrT05IO/mAMn/uYzRHL4bDJlOJa5zW0fVxB/Plafawpc1ryG9v2TrUSSTzJJ++MJn2WVniTxTTUBLJl+W0NLNWyj/wAtZWdwqX21vyX/AA3/AFd9dSV1NWxzSwMCsNVVUcovcpNTStE4P2BHoRgeNtGcVqKCVqcroqlgNzxIZ56dmtz5FPt64LwrLyOHTZBc23tadPXmbr6737KJGB4b2tNIRDTxxxRqscMEQjjQGyRxRrpAuegAwQGuQvdgv54xPifOjRV/h6gmV6fKp6mGszWvdJDAYoXLrSh0UjcqNY9QOV7uYc+8OVqssWcZewkVkOmrijezgqSusg337YcYkmbiQxTSAu8Q2aBNA1vXU2T/ACqHlcSOyx+ZVmZ1OY5lV0mVZWI5J5YI5GEgmkhp5HiRntMFudzsOuFc01XokarhSGUKTojN10X8pF2bn74a08skgncMstN8TUrSTaOG0tMshCSMoJF23I2G1sKM5EnxAJVlRoUC3I84Unew/wCffHecQkgfj+E1+tjRc0A98x5gPdKpJZXUqSLHnYbnrbFGLCbjFeEwbWgW4BeaFb5gD+/E1iItoN/Q/wA8equ+L1GMbZCF9ZlgB3C9idlIvcEH2OCWeNY5JydLRIzkrycgXAI9fTEFUHYi/viwRAiwsQeatyONEbhYKUZeMJIyxwv9kXNluRvFRUs0EtNVx0NC8lXRSGOaSWaBJWeWOS8bbki4A5c+xeVZTmmX1Qm/T1XUUcKmWajelnR5EsQFlVnMYXlc/bfkNQVc1FJTaoYquCmkEkNPVEhoGvf+jTC7KP7pBX0B3w7zDOafMPhzDWJlxEUkc8eYpPE0msgkGogDxFdthfv3wqzJuJRuMbPMx16718KJH6DulzIMO2NezkI3N6Ej6/BMqVc1enaeBl4ZEmmJmvx15MChGkg8rHngKOdYhndDT7RRjNqWijBvpJpmtCnorlkUegHTC2bxZS5Fl80SV9HmFbpZaKKjR3jgZt9cszgAgcwAv17ZXLvGuaUMDwyUtFV6o2i4k8ZEuksWsXjKk7kne59cL8PhedJG53LoHAtBsXXXX+L1UZWbB4zgdRRFt9f1r9VtPCVclN4eyMVzNGIjWQmJlYScASyMj2523t9MGGuSN84Vll+HNZmHDIQmJhLOylZH6A+bGJg8XxVRjbMKGUmBlZpKJiIyA5kVJkZW26XuDYdcUUnjnMKahqaF6alqkqJqqaU1HF2+IkMrIOG4Om5J+uNs/B8qZ8kvIAXOB399QfT1pBjysSIR7u0IPTqP5+q2+UVGT5elTl+VCKMUNRpqI4+NxIqiYaRM5qVOonT5TuNht0MIpYcqutLUVLxT1tQ1RHVyJNIZniaQzxyqqtc6LMDcbgi362KpfFtIv6QnqaAcerajTTQScKPh0sbood5tbEm++/6uIN4tjknp2+BEVJGKhahY53klkWZVUHiSAqCCq6fL374u7hOW572Gy1ws2QbPL+eh2Vo8rDDWuePMD0H/ABv8tr7rf5tLXP8AAZfM6rluZ0FbNVSQljLIIQJTTxyNdFuukkhCdmsey+neloKJ6ShSOClifUiS1VnVpSSxR6qTltdtjz5b4yI8W1KzUDx0kcNBBVxTWlaWd5eGGBUyybWIZgQqjZsEV/izNcznkqKPKoEJAVZfhuKwRRYfiTAjl2C4tHwnMDGQUOStRel31A1uqFgnZRHnYsUj3kEk7O0sfA2O/wBEVnsS5lSSrBT0M2Yao3WdKullqeFEp1IAkSMbgDqflxr8hzYyZflT2bR8FQqGIOjUIVXSW5X2PXpj5hJnHixJQDLWRyCzBYoztfkRoBGOovE2Z0NNFSRxUkkcUkjrx42YqzOXIsjLyJNu18bOIcImysQY5rymxqex7/JZ48zG8cyEGiNdr+QAX1TKP0JTvm8eVztNLU5nPLXhpWYpWsWuhVlXSOfJTy62wqraGrnzmarzuZ4HjpxSZMuU1DqlMg/EeVpjpcygm4DIAQeoFlyOW+K6amWrFTRSGasrqmvqZqSVY7yTEGyo6tstrDf9+5k/ivLOPRKqTz0kqTtVyOFWrgkcqiNFZil1APMb6iNuYXN4dn4+S+SMWXCuY0ToO+w2rUbK7H4b2NMjqo6tAPf9gn1HmHj+mroaGVIc6y2aRU+KPDUrCWsWnb51IHPUGHa98V5vk/hjMZpFFJDSVqysqSwpwI5HDWC1UKWWx6mwI572sfYa2sLfFeH5YJ4niRG+Gljkl8o3M1PUniKxO9rEDoTgE8aKpWfM5YzO0vFWjWaOSoqJb6hxzEWVI7/MSbkCwG9wBsuU+YOYAxw6N0JP/s3b7NpszAwY4nSzSAxkaajmHp7plDIBHDHc2jiTysANNvLpIXba1vphZmUkc0b3YF0clRe57Ef87Y7izKXOvU7XLsRbUzXJa3vywIQWUkDbkWOwv7nDoQcr+dxXz9kTnvpmqUM4DODyubY81p3GCnp4QxZ3Zv7q+Vfqx837sQtTf2EP+m/7zjYZGLoIuDTvFupvufpatCYtVcerob5WB9sXKuEgdqvpz2rxFxeox4qcsXKnLGhj0ularaeAzl0CsWEUkkYUX1NHZiv2uf8A7xVLwEhdp2UQCwYt3Y2AAG5J6ADDHK5Z6etpDEpcyTRo0Yt51LAnntywNmuSVEtQxMlORFHM1NCdYjSSUsplJO2pRbRcEd+dxqZksjdTzXZIsqMkkAWUmmyWhnSOZ6Kqpo5ZmgWWeEwgSjksm4ZS1xouLHobiwSZnk8dBI6CRz/RYqhdxvqqBAQdsbCLNHpIJqLMI5quhanqIXPEaSogpxGGCVQItZLjfVe5spJjsQ88pZKnLllKaqwU+Wq+keY6jDJIL87Akk/fDXDlkl5g/pse4XMZsLIyHR6dCE+yDw9lkFIHUK6yC9gSxDEbl2O98GT+F8lnIZoFDAhlYqpIINwQSL4GyyomgipuEyDUERg4JQgm1yARy588aLTmQ5Ghf101CXH0ZsPQ0UuZErnOJtKW8OZS0LxNFq1Ag6gCL97EWxGLw9lGlkMIKyRISpA09QfKBbt0w4vmI509I3+GokX/APaM4rEtWrhTQMbO0fknjIOteKLFlGw7/TFg0Ked3dK5PDuUvHwmhB0SQsrMAxU7L5b8sFJlGXQqqrApLMq3fzG3M8/bBTVDq5D0dUp1U+y8F92YgC4e29v52x0lXGhBeCrQrG8nmhv1EYJ0sdrm31xIb6KC891SctoJWaRoEvey2FhpXYcvrjLeJ8gymNcqmSCMPU5tT0klha8ckMzkErY81HXGyFVSqApFQukAeelqRy9kOF2cR5dmMNEnxaI9JXQ1sYYOgLxo8dm1py8x+2KOYSNleN/K4G0hm8CZXNBHwvw3AuDHePnvva/54z3/AGokdTWwTBxwqmVYGaRrSQAJpcae9z9sbuvr5HjnpadwsTwyU/ESxZw8ZjLKxuLbm22F6lxFGszcSbQEaQ7kgAAAE4C9rR0Uid5BAKz0fhigUkqikqC1ySTYdtRxdDQU0NzGoujW1Nso9sNDJoB5EnbuLYFfW3oP+chhXO7lsJ1hYMk9GU6duqHfhqxbdja3m+Uf5f54Elkdztc9PbBbIvXf3/lilxhW9wXY4uI2IUwV+qBZJDzIH5nEOEP2j9hgphiu2AGUpozGaRqs8JKykYEyNYXIJJKkDc7c8aplrqCdaTMYeHI41QzIdcE6Cx1RyC1xuOgIvuMJa+AGNuW2/wBOuNXXOMx8MeF647yQLFTVBvvqjHwrH3ugP19d/ZUjS1jiNzRPw0S2B02Nk+A11g91UoxaoHLEaGnkky+WrMnlhqEpigjkd7nTdnZAQFF+ZwwhpI1k4NUzRzMkMscaFCeHIusMxFxv2wGHHkkfyMCYZefj44JkdRG46/kgqXNY6GuhllglaKMS6TEyh2Zo2QWLAja/bDuEnMYxVUtNJrMsSvNUOWjSla/E30qtuR3ve2EmbUSUtPLKZBw4hGS0gCtdn0gBQST0uR3+ziirqX9CmkkqJZooFp4xwgIplk4gKqxtcKCLG4Jtt1uN0+FGK5hT/wBVzzcl8rjLH5m6C+2vUfVRky2nreOktK4jpo5VBZgHaNfO8SBTsGAsb39BexAsg4pdnAJcljttv0A7YcRVFXJBKsCASTotO04BZotf4bOqDa9trk7c8KQUbiBSSEdkBNgSFNgbKSN/fB+DmQNdz9/ksPEwXO83ZRXa1trbYcZPPUGo+H1M0XCdtJNwmm1it/t9cKNiAw5dLYPyqtioppGmQGOVQruBeRADcW9O/wDtv1oHMzRcVK0MlB2C0+n3xArZ/wDNGfyZcXK8LW0SwtfcaZY25+xxzo3lbSSO4Fx5SG/njJa1UENLJTwspmljjDPGFMjKtyAxsL4mVu1u5jH2u+E3iaDL3Slmq5niFNKIyYwCfxFL6W1Ai21+X8sNoKujlVZOLHGAoZlnIhZLoqgMHt6/85AbkNLywnZHdARGHjqr7e+PCAAxY2VQWYsdgALknF2nC7Op2paNkHllqTwl3AYJa7m3P0+uDt8xpZ3U0WVmq2SOSqqZIr6JJWkTVsbE33wMzE33+uJc8dp78seyHhopacDH5jzFUkAe/fFTA4JK4HnmggH4jgHmB1+2OankL3UF3WLE2NtnRUMuKHXBKSRTKHjN15fXFbj0wue4g0U8hAcAQgmX0xHR6YJZcQ04zOemTGaJbWWKP/hb92C8jr6Zstrclq34cdS7TUszEaI5XCAoxOwuVDA8uYNr3wvme6ke+A4eQw4bjtlhLHeh+I2XI5ktTte3cLcZV8fTw51l5usk8cUqMhK61tolC9dwb/TAmQ5fX0le0c8RUkzvSxTyKstTKqs0SiMtr0kjmQB5bX3wnpa6qgEah2aNDdFLMDH6xOPMv029MNKRZXkhrKR2aaKeOoCO34hkRlcC/W9rX/LHmTvwoy0i76/wqTYUfE5zM93LptWhPv2+CdUuc0ktVX0s8s0U1LJMs6aTLG2hHdxA8ZDhl+W1jupsxvfCOnhpaI5kKasq6pKp41h+KiWNoYUk4xDPrZmJNudrAdSfKVFlVHHWZjU0Zq+KlDW1aRPTWhhkIAJkllvd7F7Bb979xKKL4moo6bYCaaONr8gl7uT6AXvhr48czQGuDqXPQQyY7yXAtv8ARa3LsnbMKWCaqkaCCoVDEFC8eYE7MmvYA9Nj7YYNR+E6G8cmlCFYvJUVFRby7HU+pYr+lxicC5bVLNW1E88dEkipE1Q0cKks6xhUcG6oLqg3HO21jdZBDlFfmlVFS5ostLQ0dO/9HlhrNDScRH408wazWGwsdhe45BBLxB8UbhFQAs3qew7EWbGmuiuXnIkD5Pl9j9UUyeGtP4VHLTwRR8WtqK+apiENwuhI1L+ZmJ03UkD1LAGufLMtjpqiqkbMqQU8L1EsUiwVTrGh3ZUiIcgCzHsDvvtgan8LS/EB2z6ulpnj4i0yQ0ugXN49JZW2HMmwJIBuDyqmovEnx+ZUlBU0tVBTUsQeLMnkp5Z4q6I3AekUJpJUruOa8xzxaLjkzZHBsjTQs7jS63IAuzW+1etjlw8Z4rX4j6ErQ5dQTxqI5TQ1lDwA9NMkSiVbm4VkddViDcbnF1VQQPGyQxQU5KljUiCN+FYgbRbAnnz2++yXJ586yuPKsvr6SZ5ZvwkaOWJmijhVFZl0k3Rbi+9wN9+mhqpY5KStj+NWilkienjqmKgwTSqVSRLkXIO49unMdBBnjKHMPpf36JYcZjB5dvVfMZc4lqWRpSH0yCVdW/nRdKsRfnvf0wVRzQ57WZXllU00UbzSBmhYapAImcot+QNtzvgaDwnX5ll+W5hlFZHUyVNKlRPS1UkcdRGxJUurL5SrEXF7Gx64Y+DcqNNX19fml0ly2pGWUkQJJ+OdWSYBYydRUEAdBcnpcYxDTxzLVy6HlW1qopqeirJIqypTg0zmMO0JUALpCglNXoN8Y3UzkXJJ33Yknc35nD7xBXV6yT0OhEpGMQVrfiS6VWUm5PK5HTpz2OEI2GwueQHUseWOniHJHzHqkTwHy12XqkamXoouxPftgSRnnmRASE1XAHQDck4vkIjTR+s/mbHU0ezPYlm+UAEnSN72GFOTK1jXSH2C6LEidI5sfxPsoVUwhS4+c7IP44SCM1EwViWvdnvvf0wbVu7yNqVl/ZVlKkD2OKqMfiyEc7BR+8nCxjfCiL+qeSO8eZsY1CJjjEasALC9tvQWx42L2FgMAVtRwIzp+dht6DlhC4mV9DqutiDYma7BCV1asAISzSbj0GE5zGuufMPs388RmLMSzG5OBb4cQ4kbG6iykGVxOZz/ACHlCJaS98Qia1/fFHEXqccj2v742MbQSeWcF1kpijYZ5dPpcxk7MNvfCJZR64vjqSjKwvdTfkd8Bli8RhatWNmNieHWtmtdViJ4RPLwnAVkLEgqCDY33tgWigqVnrKuIxJBTxOyz1DtDAHkIXQJQD5rFtgCcBJmtHFGXEHHm2I45IpoxYc0ABZvdrehwozDOaupdeNI7kKDGHHDijQ8uGgAUDtYYwRBzAWgbhOcjFx8qMOe8NbfSrPQ19StNLn04ijpzW1EkcQCKlK5giZFPlViUEhHe9r4ol8QTSjhtGArxTQTFHkWSRJUMbAPe42JtYbfTGMkqKrSrMzqjXCtZlU27Ei2LqKleufQkj8RUeV7E+UBwo39b4zuwGgcztArRz4EIEUUPN01OpWz/wC4ZeFLE0VQ8HwxpolppEDCNr6ke2iTYBQpVrjf6OaDxNTzV0Q48LzywRU8kbFkZRG8jh2Miq53e2/e+25xhnpKukjZ2kLImnUZOYuwX5vrikVNLU6oZlVypI0uBcEG10P8sYX4EUjSAND2+HQ+w7IzsPEydIzyu6B37Efvfsn2eeLWrqzLljgljqMoqpHR11x8RtSXBha7KbrpI1tz599VDndHmr5UukGmzMy09Sh2KfJYg8wyHce2PmUtGq3envpIOrzsSG6Gxv7f82b5ZNPBU5WkhuygzhxbzakU32J3274fwuijiDINA1ctNgzY85iyG1ofY6HYpwaj4GpqxJrHwrSLIIyA34dwVBU23ItzwRlOZ5ZSUju+YfA5nV/EVryyIJKWSWWW7LeS7MVJIsDsGv7LPEnnznPohwvxKiRhcWAEgSTa3XffAEMdMaOip50Qy09RUiNtKM+mRTMo8+2kkEH740ym28qXxNAddLRVFe9SWrom4sMs0pEhDWqWiCwtJGzD5Ray9NvXfkqI5Akitcbkj9YH1Awp+NqqRIYpwVpxw+EKdygUjycNdJ+Uj05qNt9pSu9K8dSsU60spVpBIUcML3uGXax9sEhme1gaqTQsc8vpMgss15iuin1eeeVkihUDpxZSEv8AXETnWVU+pDmWXC1wBHPJLv0u0MbLb/NjCZxU1lRmFZ8VUSzlJnEJlYkLETqQInygWIsABhdxAdri/K18UyQMimuGgRRjgs5Xu37L6NVVHxKhbAuE1Jpuznr5bb2PtjqWmlp01TRvHJKA4WRWRlQ8rhhffA+WR5jU0OXzSVkNPSvTxGxqI4mkVRp3jowZTuN9Q/fhjlOSUaNm00eZGSnnqmljjhpyBG2m5GqaS9uX6vT7YXtAjMEZ17LfwuF+L/uJmnkHWjp6/HZUyuqKzHkoufX0GM7UzNNI7E7XNu30wdmNRuYAflJ12OxINsKXOB4cNDxCuhzsgf8Aib8UPNyJxQInIB7i+LJT06k4IBAAFugwxLuVIgzxCUqmp3p5pIWv5T5SeqncHEkW+GuaQh0WdR5o9n9VJ5/TAMSi1yQBjMycvYD1WTiOL/azlg23HsppGO+LQVBCoup/yHucciPKdMYNurdx6YaU1IsQG126m37sTR3cVjZFe6jS0upkepDyW5RIwTUf1V1WNgTz2vhllWVVE3iKrSuamqZ46emip0UuYYuK+iOMcUagqKp6Hb3xZSxN8RSABbceItc28oa+CvDU0jZhn2avEWV62KOJWJUvFHGVtvvuDt74FO+oze38pniMPP5QqY83y3Mc2/QtLliVAlmeKKdX0K0am3HlWQFVS2/zHb1NsNYcjyyjmqTFSxwVG8MxjO3lYErZSU59hjL1XhOmmq2lWomWPVZodC3lVdlu4ba4tq2P8tZldJHQUVPT284DPN5iQZXZnbSDyG9gPTucLpnw8n4RN9RrSaRNn5j4o06d0PX5RHW0dVS8QxGZVAkADaSrBxcHptvvjI/9meILnQ1G55jTJICR3AKY+hNZlI1ab2BYDUUW41Mq9SBcgY+beII6+HNJ5VSonpUr5geFLKSyCS8acRLsAy2sR39Nr4TnnytcAPVVyS1o53AkhWSZb4iy/wD8TRTsg/XitLYd/L5vuMWxcePNqOmmAVlSRk08rFWNh9sa/KKqrzSjraypo6bLjBPTwwU1MJeFNqTXKkiTOx1KCpuum3Ig9ErUkeY+K6KGzKEjp942KlXaUWN/a+DtJEvLpqOiK/LfJjcriaHfcafQqjP+C2f5mr/KkkMTkNa8iU8Ssbg9wcBlVBRoyCo22NxtgvMZqarzvMaiytDPWSuAy3FjqtcEe2JSLFpHDCBbbBAAPoBhi87Lm2iwqKqETxgmRwbbAsCtwL7BhiWXF6mKSllq2i0ArocKY2HUecj3+uJcOOVAsgJsdiCVZemxG+Ap4hTzIQZDHJZTqclgRyszXPp9cQ3Ucqk6aoery+mhrtdY4MMdMjWv5ZOGzR3O99gFFr/7n01flXwtcY1hoTFGxhMkcTSMmkWm4Sc99tNz+e1lZQTzigNJBxaWCP45Zpiru9QHV2WQWAsAAqi3U9WwFJAtQ6gpTEH43ykFVX4kDV+JM4Itbyja35HJkBrz5yU5wy9rPIB9/T0VAqlV4oNVRIsut45JI40Q31E7RHTzB2tjRZDW8IVELHysdY9xv/PCP4Wnc0zM8jGnQxoDw007knaNQL7kn3wTEY4G1LYHkSTz59zirCA9r29D9/JOhG6XEfHMRqCB+Wnz9VTmZ0V1Vvsz6x7NgBnGL8ycSvG6sC2kq1t9uY/jhYzsMMwGg8o6LknZYOpV1nllijjRnkdwkaILs7nYKo74er4Zz8qpKUikgHS1UuoXHI2Ui/1wH4dVFqnrpRdYQ0MVtyrsvmcD22Huca39Kp0jkt0+X+eEHEuITRS+HAAa3tUbkFuy+fzTTVBBlNkv5Yk5e574vgp3lIuPKOQHIY9pqYsbtf1Jw3hjVQABt+84bgBgoKHOfK7xJTZXQQKi2A7X2wWrRIAWPfkO3M+2PUjBAB687YWVMgjZlSaWVT5ERmBVmBvZf7o9/wDfzWl5peLg0I2Os4mYZdDGLpxg1jtsEY62/wD5H19nGTNePNSDv+kH+3BjAxT4a8MV1Ykma1EyxQIk8lOqxo0tXKqMNnblGDtfryFueAKDMIctzOthqWK09UyEuflikA2ZvQ8ifT7Z82PnYWsC14Mgjk5nFadXXiLHqXiMrMiXGpgvMgYHepraaWS9Hxo2B0upuN9raQLgjBrU8EyFXAZHCsCD9VZHU39QQcDvFmEX9XWzsvTjU1PVEehbVG/1JOELQF0XiWdAq6aoq5mVvhpokAIbjhV1craRe/5YsmWnjdBIyRySX0KXCM/eynfEkp66RRx66cDa608cFMSOxaMF/swxclLTRBhHGo1bsSNTMe7O12P1OJIHReEmuqjEI1UqoCqAxPQDqScKMsgZanNc3J8rhoKXncuytGCPYeb7YYVQkfh0UG81WQnO2mK/mJPry++FFXnFKsi0lDNSvR0q8JHLACZz88wuRsTsvoB3xvwYjrIUr4hMD+G1JpYUjqmhjaRUDRBSHYuosRszXODRTCMX4krk7XlbUbDoNsL5ZpJJ5JbISDEV0G6mzehOGQmuEDoVubA9L2vhu/YJK3cqsDcj93TA89JOY3CvE6AEjWriQdfmDW29sEtseWC6UxolTUOqSLTKgSORQ6PUy3ESsp2IFmYg/sjvgfNy6ogaXHlHVBZZFXywiZ5PhaBg6vNOHImO6NHSw7ayeu4UdW6G6WjgqxCKRnZackOKl04spZgwLlEtp2sB77m+F1ZUVM1TxaiWSoEgsrSObkjfSD0HQdBhxR0wy9Z4mkEkhlfU4NwVUkKAf+c8YOJTSRx87dL6fX+FZ2RFjR+U24bdvyVVdRu8dIDwYzqcSrSQxxryuApVRYfy9cLqmjR0CgW0iy9xbueeHkksZUhgSAGItzuAbWwGyo41KQQQCCOx9sU4bM6SMl24KAzKdkNpx2WaOtCY5BuORPXA8qjfbDurplkUkDzDkcKHuLpIPMNge+GRbXmagSMrUK3L6gQRVEe/mlR/YFdJP5YcCoNhseXY4R0MavUPqIAQA6Dzbfn7DDsNsMLMqNpffdP+GcKZkxeLKaHSvsqEaAWAHsBgyNOeBOIqG2pFP94qPtfFctQ63tIVsNTMrbKPQjrhsGlxoJTdCyiK2rSNGjQ7AaZWHO5/UX17/wDLTyHL0ra+mmq01UyOs00dwF4EfmKm/TkD3v64VxRSVEgco6xLuoKNy77jrjb5VTtT5a8rm0tWqOBaxSnH9Wp9W+Y+47YrkTCBhpXx4TM8WtYtfSxHaSJacvppjqjRWQAeRVBsLcgLDa3fHy/xLRiKuleMo0Ts6qyEMAVN9JsTuOowTn9SkbQU6bLDSwGdbfNUsWkA+zKT6n0wHQRaoJaSY7VbiVWIvwai1g/P5TsG+/TfwvkEh3K8QGvLBsEvos+zfKLJEyzUo/8AT1F2Qb3/AA2B1L9Db0xpaHxllNX5Jqerp5RzACTpe19mUqf/AI4y1RTEhgRv6EEH1BG1sDUFPpqnR7rrS6H+8pvcYDPDE9heRqmPDy9+QyEnQrft4lyMQiZZXe4JESqBNcbFShOxwnPi2srpDBl1CId9PGqHEr3P7KKAv5nCOshmXyKsYaU6VEIOpye5ONT4byqnoPhpagx/FzskdFC+xllZtOu37Kn8/bAcXFZJ0u9ls4qf7Gm82v37rT5Hl/wUUtfXzqtQFWSapqXCrADyux6noBiFdk9PmaVVZQ5fKFViWEkKR/F3Hmmgi+YX3uCN+YHQtqKEVkqO9my+kkLUmoearqLFXq5L7W5iMdt/1rK+DADbphm4sA8Ng0C5ccxd4jzqV8Jq4YoqiojSNVQqupVXSNm0m4wbDRUcdpEQBrcwSRy7Y+h+IvClFnPEqqUpTZpoK8Q3EFT1AqAoJv2YC/e9tsKYqymqKujq4JIJqdYFaOQC/mU+ZWGxUnkQSDb7UkNAUiNd5teqpcduXPHVGYzRDL6aNyulA0aqSoWZpHu1x+sdt/btiTjb05YjGf8A79sZ3tDxRWyGXwnc1WgK2HMKiN3uC8mkqixpd3YDSVIAYEnYjv74OqaoLPULqU6ZHQ6TcXU6TY4J4hghqakBjLTxBoSB5I5HYRrNIT+wSCotu1ug3T0tLrIeuquDC0nBh4acSoqJiQDYN5Qq3u7H2FydhTxNma2IlByMGbIjOQwDlG//AErnqz35dsVxysrARJr1kkKHCFWO5XcHB5ySKSkDxzVBnKCQBtAQgjUEsoHpvf8ALCg6qUzRPTypwpEDSMy3DHcMLXuLeuPY0LYXco6oeLglsTpi8AjprZTQqxUahZrC/phbWUwcMwG43/3w0glE8dzbiKAHHf1HocUyL2+2NWrSraELMsHVxYlZFPkcbYJGZVIABhQkCxOphc+1sX1lMCCwGF+mXuPqMS6Nr9VaHInxrELqtPKrgBbMqtIwOkNyUXsWP8MAxo1S6wx7RKbbdT32xXI8kzmMMSzG8jd/QWw+yylWILcbnc2te3pfByfDbXVAHnNlSp8kiZFDyTAtZWKuym3XSAcOa2qhpCFaQhpZDC43IUItgFX9lBYE9SfTHhljgAYMF0DWGI8o07km/bGWrquSeRn31SeSJTuVjve59TzPvjGYP7g+fYLZHknHFtGpVldKcwzSsmpiOEamR4iybEXIBKt6YIWnzKxBnjAZGUssShrMLGxGPaCnEcam3mNsGOwTmQO5JA54K92tDogtBQUsYhpnVBcoo07DoRfnisQRVL06Uo1VMkjrCkfmPGAZhDvZtRAIAtuRbnYFlUUValHPVTQGKnKbNUERuykjzRxt5iPW1sW1C006u0UcaVTpG0coADceIiSJiRvswGNMMAlaQ4LM/KdA9r4zsfovMvy6cGKtnp4HdxpjSpcqsKc9RAIN++NPSSLAvEeaFSGLFookRVJFtnkufTpjM0VT+lGJNQ0fDpaWqleRdXmmcJJChJ+ZPMbE76cNITQ0xViXnlJISadTJL6CGJb2+g+uEEj5YjX+Px+i6o+HlfiO85Ot19f2Wihq52W8dRJov5R+rYdLEcsFPmM6QuyQ65UVm0RrqaWwvaJCwGr0Le1+WE9PNUyN5ohHGRtrcGUnuVXyj/UcGXJHOxBBBHMEciMZWZckbtTYQZcVjxVUUXRZmksENTx46ilnZVSpiXRokblFNFe6t0HQ/WxlnGVQZxS2Xy1dOryUcgAuTYkxNf8AVb8jY++Z4Qy2oz6RWK09fT0tRBHby/HmrXVFEB3sWA6Bj0GNZT1CpGJZHCJEhlkduSIg1Fj7YftkDgCNikT2FhIO4XymNzLGrHmQCffrj0Gze3LBNR8O81VJBHwoZZ5pYoyf6tHcsq39MDbX/K+INK4XTTWj+HcHhTzQ8SxKi6aimq3S579cBVE/wpaUQI6mMxFN10+ZXDIbGxBH54OeFZ0KkkX5EHe43BwvrIMxEbkypInZ40v9SBiWgWpLjVI2hzhiz6oyyyOZIwH+RbWCXPbEM0mWYpIE0rIvw9QXsdr6o2BHbcYSUTspeMgakJdQb29tsPKaOpZ4nlo6SWBxpJfU6ANa0mhiVNue4/PcWmjo2FEElHX7tLqSd4JNJNylxsb64+w9R0/3w0MkUguhHIH6d8S8Q0tO1VSNSytLmVTFAUpkg4ayOGMJ0MGK7WGrtub4prIKfLtKJUvUypwxOqQBY1kddRELFjdehuAfvZfF7XtD+pVm48gJAFgC/h39lTKvO/19RgPgJ6/YYKV9YJCuq721jzW9cR0j/gxGyEqsupeTkXPP1vjRwssajlcWPLr74RxVUUf0HbFr5lGqnSQzdF7noMS4FxXhQCuzOqB/o4J2s9Qb9Oap/E/TCyljM8vGbkDYDso64GnlZzpJJeQl5W7knfDXLXpY5KczWMQkjMq9Sl9x7d8GI5G8oQweY8xWjpMoneOOWolSlgcB11ASTyKwuCsQIAv01MPbBXGynLLtSxKZ/wD8ioIlnv3S40L9FHvgXNcziNo4JA5uSzLy37YEpaaGrSZ1D1VRGvEWm1hGlUX1aBYkkcyBv2xvZjxxDm3Sx88khrZV1NbVVzuIxJKzHc7m/uTgJePE0lydaC8QAunFB2V/Tuen7mSx11RTRzvJQ0GXzSNDTtUzpSxzupsVjG8jWOxNrfbaueirKJo1qo9HEUyQsrJJFKv7UciEqfXfApclwFtbp3Ro8dt0469kDQipo0+EqisfmeTUzAo8khLF4yNjqPLDimlSJiGDa9gbAvI1uQNt/wBwwnqo+KYA41U6lOImrfQG12S+2Do6rLwKdY6hQC3DtJdTHpUkl+h7X63xzuVA6Q87dSd11OFlMYzw3mgNvon6PVzgBGFNENi3leob2vdFH+o+2DZaqnpozJK9gq3tzZvRR3OMtLXVkcqIlbG0Dq+mKghLVLMCqqpkckC9+dhywdV0zQRUbNqvUU6yuXdpWEwJWRS77mx5ehGBs4c8t53bff31VZeIsDuRg1+/vovZc2yuWWCrqqmOJIS4gia7MCbaiEUFixsL7f711niSHMKV6OhjnWKV14801kaSNDfQsa3IBNibnpyxlK1F+JQW3u1yO2CMvA0sBa4Zv34atibGwFqUukc9/mTA8gN7kXxS4GLTuOlvflilz029cUVlYhA7Xx0/mib2xUjWsftibHyOLdDvfHl4rOSjgzrIOjb+o640GXVYETwk/J5479Y26fQ/vwnqo9St6X+2K6WZkCtveEkMO6HY411zspZyeU2tKXglVKh0BFK0omc21yOwAjp4zzswHm9NR7Xz1ZW6ptJOpndnmkH9oTfY4uqYpCNaObMAfKSLj1tgGSC6E23AxnEQMge7YbBMmZvhYzoIxq/c+nQD90zhmEqb21rs/r2I98SsO2FNPMyEE/MmzD9pMMxIpAIsQQCDgr2UdEvY690DxAASbj3GKdfzSt0+XEGNQCEdwQwNwVF7d8VO92VVW4UgkHkffBGNrUqr3XoEXTLqYuwuTvvg9pOHE7Aedvw4gR+s21x7YWx1Eq2Ap0+hYfxwUhlmeNnXQkakKoN/Meu+BOBJsowIAoJnSmOyrNfkPONzf1xOpY05SankIZCGVkYg3G4II64Oy/I5q7LZq5aqGEpPJFFHPG4jlWMDUxmS+nckC6225jGdzMVFNU8Bmji0rpnIlSWMObkXMbFeVt74240rj5Cl+TG0eYJ/F4hknEtQJooM4hh3lmVdFbDCC3CRj8ko5gCwfrZt2ZJm6VkNIZl1w1dUlLX0qgBWd0Jjqqf9iUWINtjtfrqxjZNm8NIM0qaOsWiJTTMIysdmNlZtXnseh0geu+CctEzTvUCN46ajpZ6p5XJ0iSMaIy1+uplAxqJbRvZY2g2K3RVWRFLVwpMZI4ppo0lC6RIqMVDgevPCtmPCv+09/wA8ESOhjfTLE23R1vt74FYOwhRBdrX+nM4VR7Epy/cBaTJcwWGSOGf+rmITWeSOdlJ9Oh/2xps2TXlVW4DGShIqkC7kxlljlWw+jf5TjAqk4UDh32ta5Fz9sPBn8sMLua6XjU6SR3j0o4P9UWQ2ve3y3vzxpxz4kboysmSPDe2Rqz01QJp0/ulhuLemLKacRu67/MTt64e52mXVdNJViWCfMaT4OX4+kURLmFHUOYQayD9WZCBcjn638uaja0z4FIwsbylHikEh5gnCzq45EdN++ItY/wDN8BszaQRtpdDf0JK/xxcGuB6YyUtB0UwxHPvyxZrXSd+mBy2+3QWxzMQp77/fHqXrQ8tjqGFobhzDs2xwRrZ5KiMgagoePmNhzGKJEDKTax6EG+DsPKUJwsJrSurxtE3zR7Ke6H5T9OWK5FA1fa2F8U7KFkU+YAq/tix6iQ9t8S5tFVbqELODHJrHff1GPdURse++OmLSD+RwFp9PzwRrhWqq5tomSRvM5+ZtgOw6AYnTpuCw5m5wMpMj36DYe+GEY0r6+2PPNaBeb3RKqo6C3ri0Mt7dLbYGDY91kb7fXAUS19A8MeIMjp8vpsurKg088T1BDzIRAyyytILSLe3Pe4HvjRSZLkNXPT17UFBNPGRJDUcKJ9+jal8p9L3x8eVxqj2O7KCF+YkmwAxuctqsxho4ofjaOMxF4ZYK2nlSeOSNirJKI5FFwf7owqzsg4lPAu/vsUKbI8ICxYT7PswoI6WopVqDJWOptHSqZpF6XkYfhgd9TfQ4ylQhHhAyS2FRmlRTQyBQiqqRTTSlVVAFA/DTB+YVdZ8HUl63KAqLrJSGbVtttqkthXLOH8I5HaTiWzatQyCwDhRI9xbp5sD4dmPyCdKHx/hUiyPHdqNlkZKZImUjow3xKRDK6op3AHpfFlQw1oAdi17e2IwvaV27WGHwPkRjq5G5bk9dW1kFLTEGoOuVdUoRAsQ1ksx29vUjvgGqSGjqZ6estx4HKglrM2k7ahf+GHWTZ4cnzD4s04qIniamnW+mQRMysWibkGFhz2PLa9xv0rPDlUorIsqlqeJvxRQ0pkY26mVw354AcwYur6o9zSpLG2SrdS+eZTRZpUUueTyUdQlNVZdI1PMyERtLSMlWFBO+4Rt7WwpLzq7cIIb2J1KD0254+uR5nDVVtHRfo+eCF6WtIarESMz6QhjWONmGnTq31Y+RwMNY2uCiYI3JbksL218FEbGsNNNq1ZKxwUdY7NpuQtjsQdrYMUkAi9h2x4thv0uOfbESwufy/wB8CK02vSbdRjwttipmG4Ox6YjrG1zY49S9aGlJjmjlA2U2IG/lPPFTVFMSbPa99mBvgmSzXvbArwITe3PBAAqXSqVkDkBlZX326emJAmxBZRbYA2vb6nA7xlDcdN8evZ1VufK+DEW1CvlKtZ9NhdSTyAx2hu2KUCm4ZgOgHLE+Av8AaL/rH88BGqlrr1XsCWtgoHFCbC3XFmq3fFjqpU9Xvj3VirV6481HEUptHUPDeuy1ZWCxGvouIxsAqCdCxN/S+PrOceGMtzaWprpVdKyYAl4ZHjIAAVAdBsbC29j/AC+P0dR8NVUdToV/h54ptDWKvoYEqwO1jy5Y+jZZm1LJEqZTm0dGttRoa6JKinhIIYiGOV0kUeiy6fQYFIWjRw0Vw3mTOn8H+G6B4qqqjNRHTFnmFa7zxhQhIYxuSmxtbbr64S+NJokpssiKCOoqKqqr5IkAAReHHTqoA28tgvqVJwXV5zltKUlzTN58yliZZY6WHgRwCVfMrLTUvkuDYqZHax35jGDzPMqrMqqorKg+aSyogJKQxLssaX6D+Z5nEMo/47KC3lQEj6pfYX++IRyEFiOrcsUl95GxGJr+18ayKahXqjQ179L8++N/lFPWQ5RQVUNbUw01RGagLHTpVwx62IKm6FwQRYjl9MfPVva3Tvh9kvirN8iRoIuFUUTMzGlqdWhWY3LROvmW/Xp6dcLszDblsDHGq9v3VJIxIKK1FZT5rAtRn89YxiyWjqJojJD8PxJ54ngiSOEerjUxPoBzt86hNpEF/wBQD7YZ+IfGGf52jU0zw09ExTVS0qaUfQwccR3Jc2IB529MJUbzxn0OD4uM3Gh8Nv3+Wi8xgjoBNtQ9eQxEue+KQ3vY4iz9r4vS0WpM++9j64r1C2/3xEtzxWWtiaXrVhbHhNxtblirVjg3Lcc8TSrajKAR274FQ2LIfpgtiPywFINLasEYqORkCwsu6AsDpa9zvgrhwf2Sf6RhfDJpcdnsCPXpg3W3/AcVc2ivCqQ/8BjiTjsdjyleE48vjsdjy8vQTid7+vvjsdiFKmCByGIs2xx2Ox5Sg2Y6W9ScWw8hjsdgrtkMIlWNhjxr7Hqdz2x2OwNWQc3P6jE0Y3jOOx2CDZV6owNcA45nPLHY7AURVltsVknnjsdiQoXXOPcdjsSoXHA8w2x2OxI3XlUhJBHblgkTSWHkJ2G+ob47HYNVoa//2Q==">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label">Games</div>
+                                <h2>Subway Surfers</h2>
+                                <p>Subway Surfers is a classic endless runner game. You play as Jake, who surfs the
+                                    subways and tries to escape from the grumpy Inspector and his dog.</p>
+                                <a href="https://poki.com/game/subway-surfers"><span>Play Now</span> <i
+                                        class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__items set-bg" data-setbg="https://cdn.now.gg/apps-content/me.pou.app/icon/pou.png">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="hero__text">
+                                <div class="label">Simulation Games</div>
+                                <h2>Pou</h2>
+                                <p>Pou is a simulation game developed by Zakeh Ltd. Do you have what it takes to look
+                                    after your own alien pet? Feed it, clean it, play with it, and watch it grow up
+                                    while levelling up and unlocking new wallpapers and outfits to suit your personal
+                                    preferences. How will you personalise your Pou?</p>
+                                <a href="https://now.gg/apps/zakeh-ltd/1831/pou.html"><span>Play Now</span> <i
+                                        class="fa fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
 
-  </body>
+    <!-- Product Section Begin -->
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="trending__product">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8">
+                                <div class="section-title">
+                                    <h4>Trending Now</h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                <div class="btn__all">
+                                    <a href="#" class="primary-btn">View All <span class="arrow_right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg"
+                                        data-setbg="https://cdn.now.gg/assets-opt/_next/image?url=https%3A%2F%2Fcdn.now.gg%2Fapps-content%2Fcom.nowgg.h5.pub483.app51036%2Ficon%2Fmoto-x3m.png&w=128&q=100">
+                                        <div class="view"><i class="fa fa-eye"></i> Join the fun!</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Game</li>
+
+                                        </ul>
+                                        <h5><a href="https://now.gg/apps/madpuffers/51036/moto-x3m.html">Moto X3M</a>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg"
+                                        data-setbg="https://cdn.now.gg/assets-opt/_next/image?url=https%3A%2F%2Fcdn.now.gg%2Fapps-content%2Fcom.nowgg.h5.pub483.app51059%2Ficon%2Fbitlife-life-simulator.png&w=128&q=100">
+                                        <div class="ep">HOT RIGHT NOW</div>
+
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Life Simulation</li>
+                                            <li>Game</li>
+                                        </ul>
+                                        <h5><a href="https://now.gg/apps/moana-games/51059/bitlife-life-simulator.html">BitLife
+                                                Life Simulator</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg"
+                                        data-setbg="https://cdn.now.gg/assets-opt/_next/image?url=https%3A%2F%2Fcdn.now.gg%2Fapps-content%2Fcom.nowgg.h5.pub479.app51129%2Fgame-tiles%2Fdumb-ways-to-die-2.jpg&w=128&q=100">
+                                        <div class="ep">JUST IN ON STUDIO</div>
+
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>NEW</li>
+                                            <li>Game</li>
+                                        </ul>
+                                        <h5><a
+                                                href="https://now.gg/apps/plug-in-digital/51129/dumb-ways-to-die-2.html?ng_visitId=visit-x7PyMpQHvpXgwjaM0HYy3&ng_ngReferrer=https%253A%252F%252Fwww.bing.com%252F&ng_ngEntryPoint=https%253A%252F%252Fnow.gg%252Fapps%252Fzakeh-ltd%252F1831%252Fpou.html&ng_utmSource=NA&ng_utmMedium=NA&ng_utmCampaign=NA&ng_ntmSource=OverlayPortalOtherGames">Dumb
+                                                Ways To Die 2</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg"
+                                        data-setbg="https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/7f53593c-4090-4cc5-a934-6a5e599d8eaa.png">
+                                        <div class="ep">For You</div>
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Multiplayer</li>
+                                            <li>Game</li>
+                                        </ul>
+                                        <h5><a href="https://poki.com/en/g/g-switch-3">G-Switch 3</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg"
+                                        data-setbg="https://www.pwalist.app/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fpwa-list-b9174.appspot.com%2Fo%2Fapplication-icons%252Fshadenotes%252Ficon.jpg%3Falt%3Dmedia%26token%3D0474c0bf-4d22-4297-8691-e427250f2cf4&w=128&q=75">
+                                        <div class="ep">For You</div>
+
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Notes</li>
+                                            <li>From Shade</li>
+                                        </ul>
+                                        <h5><a href="https://shadeappworld.github.io/notes">Shade Notes Pro</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-6">
+                                <div class="product__item">
+                                    <div class="product__item__pic set-bg"
+                                        data-setbg="https://img.poki.com/cdn-cgi/image/quality=78,width=94,height=94,fit=cover,f=auto/373740bfb89dd3e6c1fb96674148e806.png">
+                                        <div class="ep">HOT RIGHT NOW</div>
+
+                                    </div>
+                                    <div class="product__item__text">
+                                        <ul>
+                                            <li>Puzzle</li>
+
+                                        </ul>
+                                        <h5><a href="https://poki.com/en/g/who-is">Who Is?</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        </section>
+    <!-- Product Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="page-up">
+            <a href="#" id="scrollToTopButton"><span class="arrow_carrot-up"></span></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer__logo">
+                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer__nav">
+                        <ul>
+                            <li class="active"><a href="./index.html">Homepage</a></li>
+                            <li><a href="./categories.html">Categories</a></li>
+                            <li><a href="./blog.html">Our Blog</a></li>
+                            <li><a href="#">Contacts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                        is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                            target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+
 </html>
